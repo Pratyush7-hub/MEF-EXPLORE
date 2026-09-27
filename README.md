@@ -71,13 +71,27 @@ The entropy-based MEF-Explore strategy and autonomous exploration are being impl
 
 ## Project Structure
 
+## Project Structure
+
 <pre>
 pratyush_24255/
 │
 ├── README.md
 ├── requirements.txt
+│
 ├── src/
+│   ├── M01_Map.py
+│   ├── M02_Robot_Communication.py
+│   ├── M03_Dynamic_Graph.py
+│   ├── M04_Local_Maps.py
+│   ├── M05_Map_Merging.py
+│   ├── M06_Frontier_Detection.py
+│   ├── M09_Simulation.py
+│   ├── M10_Test_Map_Merging.py
+│   └── M11_Test_Frontier_Detection.py
+│
 ├── results/
+│
 └── report/
 </pre>
 
