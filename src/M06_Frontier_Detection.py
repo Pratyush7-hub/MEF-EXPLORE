@@ -152,9 +152,7 @@ if __name__ == "__main__":
     for robot, position in robots.items():
         print(robot, "=", position)
 
-    # -------------------------------------------------
     # STEP 1: Sense the environment
-    # -------------------------------------------------
 
     print("\nSENSING ENVIRONMENT")
 
@@ -164,9 +162,7 @@ if __name__ == "__main__":
 
         sense_environment(robot)
 
-    # -------------------------------------------------
     # STEP 2: Detect frontiers
-    # -------------------------------------------------
 
     print("\n\nFRONTIER RESULTS")
 
