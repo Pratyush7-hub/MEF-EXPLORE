@@ -4,6 +4,10 @@
 
 This project focuses on implementing a multi-robot exploration framework for exploring an unknown environment under communication constraints. The complete system is being developed step by step, where each individual component is implemented and tested before integrating it with the next stage.
 
+**Student Name:** Pratyush Kumar Khillo  
+**Roll No.:** 24255  
+**Course:** ECS(323)  
+
 ## Current Implementation
 
 The implementation is being developed in the following sequence:
