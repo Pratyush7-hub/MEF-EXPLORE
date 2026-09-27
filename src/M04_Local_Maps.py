@@ -1,6 +1,6 @@
 import numpy as np
-from Map import grid
-from Robot_Communication import robots
+from M01_Map import grid
+from M02_Robot_Communication import robots
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 

@@ -1,7 +1,7 @@
 import numpy as np
 from itertools import combinations
 
-from Robot_Communication import robots, calculate_distance
+from M02_Robot_Communication import robots, calculate_distance
 
 COMMUNICATION_THRESHOLD = 4
 

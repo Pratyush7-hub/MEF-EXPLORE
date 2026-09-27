@@ -1,4 +1,4 @@
-from Local_Maps import local_maps, UNKNOWN, FREE, MAP_SIZE
+from M04_Local_Maps import local_maps, UNKNOWN, FREE, MAP_SIZE
 
 
 def find_frontiers(robot_name):
@@ -90,7 +90,7 @@ def show_frontiers(robot_name):
         )
 
     # Plot robot position
-    from Robot_Communication import robots
+    from M02_Robot_Communication import robots
 
     x, y = robots[robot_name]
 

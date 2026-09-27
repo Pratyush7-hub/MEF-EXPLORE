@@ -1,6 +1,6 @@
-from Robot_Communication import robots
-from Local_Maps import sense_environment, show_local_map
-from Map_Merging import merge_maps
+from M02_Robot_Communication import robots
+from M04_Local_Maps import sense_environment, show_local_map
+from M05_Map_Merging import merge_maps
 
 
 print(" ROBOT POSITIONS ")

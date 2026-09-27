@@ -1,6 +1,6 @@
 import numpy as np
 from itertools import combinations
-from Map import grid
+from M01_Map import grid
 
 # ROBOT POSITIONS(X, Y)
 

@@ -1,6 +1,6 @@
-from Robot_Communication import robots, move_robot
-from Local_Maps import sense_environment
-from Dynamic_Graph import show_graph
+from M02_Robot_Communication import robots, move_robot
+from M04_Local_Maps import sense_environment
+from M03_Dynamic_Graph import show_graph
 
 
 def move_and_sense(robot_name, direction):

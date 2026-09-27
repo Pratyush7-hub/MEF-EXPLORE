@@ -1,7 +1,7 @@
 import numpy as np
 
-from Local_Maps import local_maps, UNKNOWN, MAP_SIZE
-from Robot_Communication import calculate_distance
+from M04_Local_Maps import local_maps, UNKNOWN, MAP_SIZE
+from M02_Robot_Communication import calculate_distance
 
 
 

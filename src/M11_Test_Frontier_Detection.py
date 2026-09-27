@@ -1,6 +1,6 @@
-from Robot_Communication import robots
-from Local_Maps import sense_environment
-from Frontier_Detection import find_frontiers, show_frontiers
+from M02_Robot_Communication import robots
+from M04_Local_Maps import sense_environment
+from M06_Frontier_Detection import find_frontiers, show_frontiers
 
 
 print(" SENSING ")
