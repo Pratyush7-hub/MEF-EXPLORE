@@ -1,3 +1,4 @@
+import sys
 import numpy as np
 from itertools import combinations
 from M01_Map import grid
@@ -6,7 +7,7 @@ from M01_Map import grid
 
 robots = {
     "R1": (1, 3),
-    "R2": (6, 9),
+    "R2": (4, 4),
     "R3": (8, 5)
 }
 
@@ -109,21 +110,47 @@ def check_communication():
 
 if __name__ == "__main__":
 
-    print(" INITIAL POSITIONS ")
+    output_file = "../results/02_robot_communication/communication_test.txt"
 
-    for robot, position in robots.items():
-        print(robot, "=", position)
+    class Tee:
+        def __init__(self, *files):
+            self.files = files
 
-    check_communication()
+        def write(self, text):
+            for file in self.files:
+                file.write(text)
+                file.flush()
 
-    print("\n ROBOT MOVEMENT ")
+        def flush(self):
+            for file in self.files:
+                file.flush()
 
-    move_robot("R1", "RIGHT")
-    move_robot("R1", "UP")
+    original_stdout = sys.stdout
 
-    move_robot("R2", "LEFT")
-    move_robot("R2", "DOWN")
+    with open(output_file, "w", encoding="utf-8") as file:
 
-    move_robot("R3", "LEFT")
+        sys.stdout = Tee(original_stdout, file)
 
-    check_communication()
+        try:
+
+            print("INITIAL POSITIONS")
+
+            for robot, position in robots.items():
+                print(robot, "=", position)
+
+            check_communication()
+
+            print("\nROBOT MOVEMENT")
+
+            move_robot("R1", "RIGHT")
+            move_robot("R1", "UP")
+
+            move_robot("R2", "LEFT")
+            move_robot("R2", "DOWN")
+
+            move_robot("R3", "LEFT")
+
+            check_communication()
+
+        finally:
+            sys.stdout = original_stdout
