@@ -67,6 +67,32 @@ For these initial stages, different robot positions, movements, communication co
 
 The entropy-based MEF-Explore strategy and autonomous exploration are being implemented progressively after the individual components are verified.
 
+## Results
+
+### Map Generation
+
+A 10 × 10 grid environment was created with predefined obstacles, free cells, and three initial robot positions. The generated map provides the common environment used for testing the subsequent components of the framework.
+
+### Robot Communication and Movement
+
+Robot movement was implemented using four directions: UP, DOWN, LEFT, and RIGHT, with boundary and obstacle checking. The communication condition between robots was determined using the Euclidean distance and a predefined communication threshold. The test output shows the communication condition between different pairs of robots before and after movement.
+
+### Dynamic Communication Graph
+
+A dynamic communication graph was generated based on the current positions of the robots. Robots within the communication threshold are represented as connected nodes, while robots outside the communication range remain disconnected. The graph therefore changes according to the relative positions of the robots.
+
+### Local Maps
+
+Each robot maintains an independent local map initialized with unknown cells. The robots sense their current cell and neighbouring cells in the four cardinal directions, and the sensed information is used to update their respective local maps. The generated visualizations show the explored information available to each robot.
+
+### Map Merging
+
+Map merging was tested under different communication conditions. When two robots are within the defined communication range, their known map information can be shared and merged. When robots are outside the communication range, map merging is not performed. The resulting visualization shows the effect of map sharing between communicating robots.
+
+### Frontier Detection
+
+Frontier detection was performed on the local maps of all three robots. An unknown cell is identified as a frontier when it is adjacent to at least one explored free cell. The detected frontier cells are visualized on each robot's local map and represent potential regions for further exploration.
+
 ## Project Structure
 
 <pre>
@@ -87,6 +113,12 @@ pratyush_24255/
 │   └── M11_Test_Frontier_Detection.py
 │
 ├── results/
+    ├── 01_map/
+    ├── 02_robot_communication/
+    ├── 03_dynamic_graph/
+    ├── 04_local_maps/
+    ├── 05_map_merging/
+    └── 06_frontier_detection/
 │
 └── report/
 </pre>
