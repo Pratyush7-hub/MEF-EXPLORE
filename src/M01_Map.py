@@ -109,6 +109,7 @@ def show_map():
 
     ax.set_aspect("equal")
 
+    plt.savefig("../results/01_map/map_environment.png", dpi=300, bbox_inches="tight")
     plt.show()
 
 if __name__ == "__main__":
