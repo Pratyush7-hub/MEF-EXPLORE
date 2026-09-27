@@ -18,6 +18,7 @@ def create_local_map():
         UNKNOWN
     )
 
+
 local_maps = {
     "R1": create_local_map(),
     "R2": create_local_map(),
@@ -85,10 +86,18 @@ def show_local_map(robot_name):
 
     ax.set_aspect("equal")
 
-    plt.show()
-def sense_environment(R3):
+    plt.savefig(
+        f"../results/04_local_maps/{robot_name}_local_map.png",
+        dpi=300,
+        bbox_inches="tight"
+    )
 
-    x, y = robots[R3]
+    plt.show()
+
+
+def sense_environment(robot_name):
+
+    x, y = robots[robot_name]
 
     sensor_cells = [
         (x, y),
@@ -109,7 +118,7 @@ def sense_environment(R3):
         value = grid[cell_y, cell_x]
 
         print(
-            R3,
+            robot_name,
             "sensed",
             (cell_x, cell_y),
             "=",
@@ -117,11 +126,13 @@ def sense_environment(R3):
         )
 
         update_cell(
-            R3,
+            robot_name,
             cell_x,
             cell_y,
             value
         )
+
+
 if __name__ == "__main__":
 
     print("Robot positions:")
@@ -129,12 +140,14 @@ if __name__ == "__main__":
     for robot, position in robots.items():
         print(robot, "=", position)
 
-    print("\nR3 sensing environment...")
+    for robot in robots:
 
-    sense_environment("R3")
+        print("\n" + robot + " sensing environment...")
 
-    print("\nR3 local map:")
+        sense_environment(robot)
 
-    print(local_maps["R3"])
+        print("\n" + robot + " local map:")
 
-    show_local_map("R3")
+        print(local_maps[robot])
+
+        show_local_map(robot)
