@@ -69,10 +69,6 @@ The entropy-based MEF-Explore strategy and autonomous exploration are being impl
 
 ## Project Structure
 
-## Project Structure
-
-## Project Structure
-
 <pre>
 pratyush_24255/
 │
